@@ -14,7 +14,7 @@ class LokalTerdaftar(Resource):
             Url = Urla + str(x) + Urlb + str(x+1) + Urlc
             r = requests.get(Url)
             retur.append(r.json())
-            print(retur)
+            #print(retur)
         base = Path('JSONDump')
         dumpname = base / ('PSELokal' + str(a) + '-' + str(b) + '.json')
         base.mkdir(exist_ok=True)
@@ -31,7 +31,7 @@ class AsingTerdaftar(Resource):
             Url = Urla + str(x) + Urlb + str(x+1) + Urlc
             r = requests.get(Url)
             retur.append(r.json())
-            print(retur)
+            #print(retur)
         base = Path('JSONDump')
         dumpname = base / ('PSEAsing' + str(a) + '-' + str(b) + '.json')
         base.mkdir(exist_ok=True)
