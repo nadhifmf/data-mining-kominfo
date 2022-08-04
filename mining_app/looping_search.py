@@ -15,7 +15,11 @@ class LokalTerdaftar(Resource):
             r = requests.get(Url)
             try:
                 retur.append(r.json())
-            except:
+            except Exception as Argument:
+                print(str(Argument))
+                f = open("errorlog.txt", "a")
+                f.write(str(Argument))
+                f.close()
                 pass
             #print(retur)
         base = Path('JSONDump')
@@ -35,7 +39,11 @@ class LokalDihentikan(Resource):
             r = requests.get(Url)
             try:
                 retur.append(r.json())
-            except:
+            except Exception as Argument:
+                print(str(Argument))
+                f = open("errorlog.txt", "a")
+                f.write(str(Argument))
+                f.close()
                 pass
             #print(retur)
         base = Path('JSONDump')
@@ -55,7 +63,11 @@ class AsingTerdaftar(Resource):
             r = requests.get(Url)
             try:
                 retur.append(r.json())
-            except:
+            except Exception as Argument:
+                print(str(Argument))
+                f = open("errorlog.txt", "a")
+                f.write(str(Argument))
+                f.close()
                 pass
             #print(retur)
         base = Path('JSONDump')
@@ -75,7 +87,11 @@ class AsingDihentikan(Resource):
             r = requests.get(Url)
             try:
                 retur.append(r.json())
-            except:
+            except Exception as Argument:
+                print(str(Argument))                
+                f = open("errorlog.txt", "a")
+                f.write(str(Argument))
+                f.close()
                 pass
             #print(retur)
         base = Path('JSONDump')
