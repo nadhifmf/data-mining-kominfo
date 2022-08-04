@@ -24,7 +24,7 @@ class LokalTerdaftar(Resource):
 
 class AsingTerdaftar(Resource):
     def get(self, a, b):
-        for x in range(a-1, b-1):
+        for x in range(a-1, b):
             Urla = "https://pse.kominfo.go.id/static/json-static/ASING_TERDAFTAR/"
             Urlb = ".json?page[page]="
             Urlc = "&page[limit]=10&filter[search_term]="
