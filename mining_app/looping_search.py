@@ -1,6 +1,7 @@
 import requests
 import json
 from flask_restful import Resource
+from pathlib import Path
 
 retur = []
 
@@ -13,7 +14,9 @@ class LokalTerdaftar(Resource):
             r = requests.get(Url)
             retur.append(r.json())
             print(retur)
-        dumpname = 'PSELokal' + str(a) + '-' + str(b) + '.json'
+        base = Path('JSONDump')
+        dumpname = base / ('PSELokal' + str(a) + '-' + str(b) + '.json')
+        base.mkdir(exist_ok=True)
         with open(dumpname, 'w') as json_file:
             json.dump(retur, json_file)
         return retur
@@ -27,7 +30,9 @@ class AsingTerdaftar(Resource):
             r = requests.get(Url)
             retur.append(r.json())
             print(retur)
-        dumpname = 'PSEAsing' + str(a) + '-' + str(b) + '.json'
+        base = Path('JSONDump')
+        dumpname = base / ('PSEAsing' + str(a) + '-' + str(b) + '.json')
+        base.mkdir(exist_ok=True)
         with open(dumpname, 'w') as json_file:
             json.dump(retur, json_file)
         return retur
