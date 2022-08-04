@@ -13,7 +13,10 @@ class LokalTerdaftar(Resource):
             Urlc = "&page[limit]=10&filter[search_term]="
             Url = Urla + str(x) + Urlb + str(x+1) + Urlc
             r = requests.get(Url)
-            retur.append(r.json())
+            try:
+                retur.append(r.json())
+            except:
+                pass
             #print(retur)
         base = Path('JSONDump')
         dumpname = base / ('PSELokal' + str(a) + '-' + str(b) + '.json')
@@ -30,7 +33,10 @@ class LokalDihentikan(Resource):
             Urlc = "&page[limit]=10&filter[search_term]="
             Url = Urla + str(x) + Urlb + str(x+1) + Urlc
             r = requests.get(Url)
-            retur.append(r.json())
+            try:
+                retur.append(r.json())
+            except:
+                pass
             #print(retur)
         base = Path('JSONDump')
         dumpname = base / ('PSELokalN' + str(a) + '-' + str(b) + '.json')
@@ -47,7 +53,10 @@ class AsingTerdaftar(Resource):
             Urlc = "&page[limit]=10&filter[search_term]="
             Url = Urla + str(x) + Urlb + str(x+1) + Urlc
             r = requests.get(Url)
-            retur.append(r.json())
+            try:
+                retur.append(r.json())
+            except:
+                pass
             #print(retur)
         base = Path('JSONDump')
         dumpname = base / ('PSEAsing' + str(a) + '-' + str(b) + '.json')
@@ -64,7 +73,10 @@ class AsingDihentikan(Resource):
             Urlc = "&page[limit]=10&filter[search_term]="
             Url = Urla + str(x) + Urlb + str(x+1) + Urlc
             r = requests.get(Url)
-            retur.append(r.json())
+            try:
+                retur.append(r.json())
+            except:
+                pass
             #print(retur)
         base = Path('JSONDump')
         dumpname = base / ('PSEAsingN' + str(a) + '-' + str(b) + '.json')
