@@ -8,20 +8,19 @@ api = Api(app)
 retur = []
 
 class PrintJSon(Resource):
-    def get(self):
-        for x in range(909):
+    def get(self, jumlah):
+        for x in range(jumlah):
             Urla = "https://pse.kominfo.go.id/static/json-static/LOKAL_TERDAFTAR/"
             Urlb = ".json?page[page]=1&page[limit]=10&filter[search_term]="
             Url = Urla + str(x) + Urlb
             r = requests.get(Url)
             retur.append(r.json())
             print(retur)
+        with open('pselokal.json', 'w') as json_file:
+            json.dump(retur, json_file)
         return retur
 
-with open('pselokal.json', 'w') as json_file:
-    json.dump(retur, json_file)
-
-api.add_resource(PrintJSon, '/')
+api.add_resource(PrintJSon, '/pselokal/<int:jumlah>')
 
 if __name__ == '__main__':
     app.run(debug=True)
