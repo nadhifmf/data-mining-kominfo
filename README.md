@@ -16,6 +16,6 @@ Aplikasi ini berbasis RESTFull API, jika ingin menggunakannya cukup gunakan brow
 
 # How to use
 ### For PSE lokal:
-(GET) http://localhost:5000/pselokal/<First Page>/<Last Page>
+(GET) http://localhost:5000/pselokal/(First Page)/(Last Page)
 ### For PSE 
-(GET) http://localhost:5000/pseasing/<First Page>/<Last Page>
+(GET) http://localhost:5000/pseasing/(First Page)/(Last Page)
