@@ -7,8 +7,8 @@ def app_mining():
     api = Api(app)
 
     api.add_resource(looping_search.LokalTerdaftar, '/pselokal/<int:a>/<int:b>')
-    api.add_resource(looping_search.LokalDihentikan, '/pselokal/<int:a>/<int:b>')
+    api.add_resource(looping_search.LokalDihentikan, '/pselokaln/<int:a>/<int:b>')
     api.add_resource(looping_search.AsingTerdaftar, '/pseasing/<int:a>/<int:b>')
-    api.add_resource(looping_search.AsingDihentikan, '/pselokal/<int:a>/<int:b>')
+    api.add_resource(looping_search.AsingDihentikan, '/pselokaln/<int:a>/<int:b>')
 
     return app   
