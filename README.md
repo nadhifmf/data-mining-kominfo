@@ -11,7 +11,7 @@ Aplikasi ini berbasis RESTFull API, jika ingin menggunakannya cukup gunakan brow
 2. Instal Virtual environtment `pip install virtualenv`
 3. Create Virtual environtment (in windows: `py -m venv venv`)
 4. Activate Virtual environtment (in windows: `.\venv\Scripts\activate`)
-4. Install dependencies `pip install request`, `pip install Flask`, and `pip install flask_restful`
+4. Install dependencies `pip install requests`, `pip install Flask`, and `pip install flask_restful`
 5. Run main `python main.py`
 
 # How to use
